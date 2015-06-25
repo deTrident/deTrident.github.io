@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: GitHub | Better man</title>
+  <title>OpenCV无法正常启动Oxc000007b错误 | Better man</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技术学习 知识管理 总结思考">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Better man">
-<meta property="og:url" content="http://yoursite.com/categories/GitHub/index.html">
+  <meta name="description" content="OpenCV无法正常启动Oxc000007b错误">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenCV无法正常启动Oxc000007b错误">
+<meta property="og:url" content="http://yoursite.com/2015/03/28/OpenCV-Oxc000007b-Error/index.html">
 <meta property="og:site_name" content="Better man">
-<meta property="og:description" content="技术学习 知识管理 总结思考">
+<meta property="og:description" content="OpenCV无法正常启动Oxc000007b错误">
+<meta property="og:updated_time" content="2015-06-25T14:15:47.964Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Better man">
-<meta name="twitter:description" content="技术学习 知识管理 总结思考">
+<meta name="twitter:title" content="OpenCV无法正常启动Oxc000007b错误">
+<meta name="twitter:description" content="OpenCV无法正常启动Oxc000007b错误">
   
     <link rel="alternative" href="/atom.xml" title="Better man" type="application/atom+xml">
   
@@ -169,57 +170,116 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-OpenCV-Oxc000007b-Error" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/03/24/Hexo-GitHub-Pages搭建/" class="archive-article-date">
-  	<time datetime="2015-03-24T12:39:33.000Z" itemprop="datePublished">3月 24</time>
+    <div class="article-meta">
+      <a href="/2015/03/28/OpenCV-Oxc000007b-Error/" class="article-date">
+  	<time datetime="2015-03-28T13:27:26.000Z" itemprop="datePublished">2015-03-28</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/24/Hexo-GitHub-Pages搭建/">Hexo+GitHub Pages搭建</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      OpenCV无法正常启动Oxc000007b错误
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenCV2/">OpenCV2</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/GitHub/">GitHub</a>
+	<a class="article-category-link" href="/categories/OpenCV/">OpenCV</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="环境">环境</h2><p>在之前win7系统下一直没见过这个错误，更换到win8.1 64bit，在一系列非人类配置完成后，编译成功，运行却报错。显示<a id="more"></a><strong>“无法正常启动Oxc000007b错误”</strong>。搜索了一下，好像出现这个问题的不少，折磨了好大一批人。OpenCV我使用的版本是2.4.9，引用的是自己根据<a href="http://www.nmtree.net/2014/03/19/windows_build-opencv-with-cmake-and-vs2013.html" target="_blank" rel="external">柠檬树</a>的教程编译的库。测试程序为VS2013+win32 console application。</p>
+<h2 id="解决方案">解决方案</h2><blockquote>
+<p>网络解决方案(对环境变量的修改，记得注销系统来生效)<br>    1.环境变量里原来只有D:\OpenCV2\build\x64\vc10\bin加上D:\OpenCV2\build\x86\vc10\bin就OK了<br>    2.64位程序环境变量里添加D:\opencv\build\common\tbb\intel64\vc10；32位要添加D:\opencv\build\common\tbb\ia32\vc10</p>
+</blockquote>
+<h3 id="我的测试：">我的测试：</h3><ul>
+<li><p>更换debug——win32平台为x64平台，未出现该问题（ps:可能跟window系统有关)</p>
+</li>
+<li><p>升级OpenCV版本到2.4.11，问题没再出现<font color="red">【2015-6-1更新】</font></p>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/03/24/Hexo-GitHub-Pages搭建/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo+GitHub Pages搭建</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="OpenCV-Oxc000007b-Error" data-title="OpenCV无法正常启动Oxc000007b错误" data-url="http://yoursite.com/2015/03/28/OpenCV-Oxc000007b-Error/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"trident"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -245,10 +305,10 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false
 	}
 </script>
