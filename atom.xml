@@ -4,9 +4,9 @@
   <title><![CDATA[Better man]]></title>
   <subtitle><![CDATA[Technology Changes the World]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://yoursite.com//"/>
+  <link href="http://deTrident.github.io//"/>
   <updated>2015-06-25T14:15:47.964Z</updated>
-  <id>http://yoursite.com//</id>
+  <id>http://deTrident.github.io//</id>
   
   <author>
     <name><![CDATA[deTrident]]></name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title><![CDATA[OpenCV无法正常启动Oxc000007b错误]]></title>
-    <link href="http://yoursite.com/2015/03/28/OpenCV-Oxc000007b-Error/"/>
-    <id>http://yoursite.com/2015/03/28/OpenCV-Oxc000007b-Error/</id>
+    <link href="http://deTrident.github.io/2015/03/28/OpenCV-Oxc000007b-Error/"/>
+    <id>http://deTrident.github.io/2015/03/28/OpenCV-Oxc000007b-Error/</id>
     <published>2015-03-28T13:27:26.000Z</published>
     <updated>2015-06-25T14:15:47.964Z</updated>
     <content type="html"><![CDATA[<h2 id="环境">环境</h2><p>在之前win7系统下一直没见过这个错误，更换到win8.1 64bit，在一系列非人类配置完成后，编译成功，运行却报错。显示<a id="more"></a><strong>“无法正常启动Oxc000007b错误”</strong>。搜索了一下，好像出现这个问题的不少，折磨了好大一批人。OpenCV我使用的版本是2.4.9，引用的是自己根据<a href="http://www.nmtree.net/2014/03/19/windows_build-opencv-with-cmake-and-vs2013.html" target="_blank" rel="external">柠檬树</a>的教程编译的库。测试程序为VS2013+win32 console application。</p>
@@ -37,16 +37,16 @@
     
     </summary>
     
-      <category term="OpenCV2" scheme="http://yoursite.com/tags/OpenCV2/"/>
+      <category term="OpenCV2" scheme="http://deTrident.github.io/tags/OpenCV2/"/>
     
-      <category term="OpenCV" scheme="http://yoursite.com/categories/OpenCV/"/>
+      <category term="OpenCV" scheme="http://deTrident.github.io/categories/OpenCV/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Hexo+GitHub Pages搭建]]></title>
-    <link href="http://yoursite.com/2015/03/24/Hexo-GitHub-Pages%E6%90%AD%E5%BB%BA/"/>
-    <id>http://yoursite.com/2015/03/24/Hexo-GitHub-Pages搭建/</id>
+    <link href="http://deTrident.github.io/2015/03/24/Hexo-GitHub-Pages%E6%90%AD%E5%BB%BA/"/>
+    <id>http://deTrident.github.io/2015/03/24/Hexo-GitHub-Pages搭建/</id>
     <published>2015-03-24T12:39:33.000Z</published>
     <updated>2015-06-25T14:15:17.063Z</updated>
     <content type="html"><![CDATA[<p><img src="http://ww3.sinaimg.cn/mw690/87f64593gw1etggj06mmmg20dw07su0y.gif" alt=""></p>
@@ -60,11 +60,11 @@
     
     </summary>
     
-      <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
+      <category term="Github" scheme="http://deTrident.github.io/tags/Github/"/>
     
-      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://deTrident.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
-      <category term="GitHub" scheme="http://yoursite.com/categories/GitHub/"/>
+      <category term="GitHub" scheme="http://deTrident.github.io/categories/GitHub/"/>
     
   </entry>
   
