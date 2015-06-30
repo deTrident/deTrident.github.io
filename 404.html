@@ -10,14 +10,27 @@ Author URL: http://w3layouts.com
 		<meta name="keywords" content="404">
 		<link href="./css/404-style.css" rel="stylesheet" type="text/css" media="all">
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		
+			<script type="text/javascript">
+				var num=5;
+				function redirect(){
+					num--;
+					document.getElementById("num").innerHTML=num;
+					if(num<0){
+						document.getElementById("num").innerHTML=0;
+						location.href="http://deTrident.github.io";
+						}
+					}
+				setInterval("redirect()", 1000);
+			</script>
 	</head>
-	<body>
+	<body onload="redirect();">
 		<!--start-wrap--->
 		<div class="wrap">
 			<!---start-header---->
 				<div class="header">
 					<div class="logo">
-						<h1><a href="#">Sorry</a></h1>
+						<h1><a href="#">Sorry! <span id="num"></span>秒后自动跳转到主页</a></h1>
 					</div>
 				</div>
 			<!---End-header---->

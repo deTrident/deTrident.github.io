@@ -32,7 +32,7 @@ body{
 }
 .content p{
 	font-family: "Century Gothic";
-	font-size:2em;
+	font-size:1.5em;
 	color:#666;
 	text-align:center;
 }
@@ -41,7 +41,7 @@ body{
 }
 .content{
 	text-align:center;
-	padding:115px 0px 0px 0px;
+	padding:70px 0px 0px 0px;
 }
 .content a{
 	color:#fff;
