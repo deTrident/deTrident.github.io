@@ -5,7 +5,7 @@
   <subtitle><![CDATA[Technology Changes the World]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://deTrident.github.io//"/>
-  <updated>2015-06-25T14:15:47.964Z</updated>
+  <updated>2015-07-22T03:15:59.298Z</updated>
   <id>http://deTrident.github.io//</id>
   
   <author>
@@ -14,6 +14,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Review TinyXML]]></title>
+    <link href="http://deTrident.github.io/2015/04/21/Review-TinyXML/"/>
+    <id>http://deTrident.github.io/2015/04/21/Review-TinyXML/</id>
+    <published>2015-04-21T13:18:46.000Z</published>
+    <updated>2015-07-22T03:15:59.298Z</updated>
+    <content type="html"><![CDATA[<p>最近项目读取影像数据metadata，再次用到TinyXML，已经不那么熟练。之前使用还是专题产品系统的时候，在副研师兄大框架下引用的。最近有点空，整理下相关内容，备以后查询回顾。<br><a id="more"></a></p>
+<h2 id="特性：">特性：</h2><p>TinyXML是目前C++的XML解析器用起来最友好的，作为轻量开源跨平台库（可商用），对xml的文本的解析提供了很大的便利。解析库模型在解析xml文件后，在内存中将信息转化为文档对象模型(DOM)使得可读、写、存，并利用树形结构表示这些元素之间的顺序和嵌套关系。支持UTF-8编码和前64k个字符实体。<br><strong>注意：</strong>不解析文档类型定义(DTDs)和可扩展样式表语言XSLs<br>例如下面DTD语法在TinyXML里是不做解析的<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE Archiv [</span><br><span class="line">	 &lt;!ELEMENT Comment (#PCDATA)&gt;</span><br><span class="line">]&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>所以用于浏览器或更复杂的XML需要，目前的TinyXML是不能满足的。</p>
+<h2 id="使用：">使用：</h2><p>下载<a href="http://sourceforge.net/projects/tinyxml/" target="_blank" rel="external">TinyXML</a>，解压缩后，将根目录下tinyxml.h、tinyxml.cpp、tinystr.h、tinystr.cpp、tinyxmlerror.cpp、tinyxmlparser.cpp六个文件拷贝添加到将要使用的Cpp工程即可，需要操作XML文件的地方，在头文件中加入<code>#include&quot;tinyxml.h&quot;</code>。如需要，可编译成dll（技能点加强：在tinyxml.h改相关属性来自定义特性）</p>
+<h2 id="操作：">操作：</h2><p><img src="http://grinninglizard.com/tinyxmldocs/classTiXmlBase.png" alt="classTiXmlBase" title="TiXMlBase官方类图"><br>        （一图以蔽之，官方大法好）</p>
+<blockquote>
+<p>类列表<br>    TiXmlBase：整个TinyXML模型的基类。<br>    TiXmlAttribute：XML中的元素的属性对（name-value)。<br>    TiXmlNode：DOM结构中的节点。<br>    TiXmlComment：XML中的注释<br>    TiXmlDeclaration：XML中的声明部分，在开始处，即&lt;？versiong=”1.0” ?&gt;。<br>    TiXmlDocument：XML的整个文档，即顶端节点。<br>    TiXmlElement：XML的元素，为一个容器。<br>    TiXmlText：XML的文字。<br>    TiXmlUnknown：任何未被TinyXML识别的保存成了这个未知。<br>    TiXmlHandler：定义了针对XML的一些操作。</p>
+</blockquote>
+<h2 id="代码段：">代码段：</h2><p>据详细的tutorial，<a href="http://grinninglizard.com/tinyxmldocs/tutorial0.html" target="_blank" rel="external">http://grinninglizard.com/tinyxmldocs/tutorial0.html</a><br>不怕不会用呀，备查</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[TinyXML]]>
+    
+    </summary>
+    
+      <category term="TinyXML" scheme="http://deTrident.github.io/tags/TinyXML/"/>
+    
+      <category term="C++" scheme="http://deTrident.github.io/categories/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[regular-expression]]></title>
+    <link href="http://deTrident.github.io/2015/04/12/regular-expression/"/>
+    <id>http://deTrident.github.io/2015/04/12/regular-expression/</id>
+    <published>2015-04-12T03:00:06.000Z</published>
+    <updated>2015-07-22T03:17:28.116Z</updated>
+    <content type="html"><![CDATA[<p>正则表达式超赞教程 (<em>^__^</em>) <a id="more"></a><br>正则表达式30分钟入门教程 <a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="external">http://deerchao.net/tutorials/regex/regex.htm</a><br>（30分钟学不完，请自觉回家种地）</p>
+<p>Python抓包，正则表达式必备，从<a href="http://www.cnblogs.com/huxi" target="_blank" rel="external">AstralWind</a><code>大神博客</code>直接引图，搬运工角色扮演中→_→</p>
+<p><img src="http://ww2.sinaimg.cn/mw690/87f64593gw1eubddbh1duj20m71brb29.jpg" alt="Python-Regex" title="Python正则表达式图"></p>
+<p>这篇为啥就这几个字？<br>因为<br>    <em>任性</em>！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[正则表达式]]>
+    
+    </summary>
+    
+      <category term="Python" scheme="http://deTrident.github.io/tags/Python/"/>
+    
+      <category term="Python" scheme="http://deTrident.github.io/categories/Python/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[OpenCV无法正常启动Oxc000007b错误]]></title>
