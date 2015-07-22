@@ -5,7 +5,7 @@
   <subtitle><![CDATA[Technology Changes the World]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://deTrident.github.io//"/>
-  <updated>2015-07-22T03:15:59.298Z</updated>
+  <updated>2015-07-22T07:51:01.767Z</updated>
   <id>http://deTrident.github.io//</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[OpenCV无法正常启动Oxc000007b错误]]></title>
+    <link href="http://deTrident.github.io/2015/05/02/OpenCV-Oxc000007b-Error/"/>
+    <id>http://deTrident.github.io/2015/05/02/OpenCV-Oxc000007b-Error/</id>
+    <published>2015-05-02T13:27:26.000Z</published>
+    <updated>2015-07-22T07:51:01.767Z</updated>
+    <content type="html"><![CDATA[<h2 id="环境">环境</h2><p>在之前win7系统下一直没见过这个错误，更换到win8.1 64bit，在一系列非人类配置完成后，编译成功，运行却报错。显示<a id="more"></a><strong>“无法正常启动Oxc000007b错误”</strong>。搜索了一下，好像出现这个问题的不少，折磨了好大一批人。OpenCV我使用的版本是2.4.9，引用的是自己根据<a href="http://www.nmtree.net/2014/03/19/windows_build-opencv-with-cmake-and-vs2013.html" target="_blank" rel="external">柠檬树</a>的教程编译的库。测试程序为VS2013+win32 console application。</p>
+<h2 id="解决方案">解决方案</h2><blockquote>
+<p>网络解决方案(对环境变量的修改，记得注销系统来生效)<br>    1.环境变量里原来只有D:\OpenCV2\build\x64\vc10\bin加上D:\OpenCV2\build\x86\vc10\bin就OK了<br>    2.64位程序环境变量里添加D:\opencv\build\common\tbb\intel64\vc10；32位要添加D:\opencv\build\common\tbb\ia32\vc10</p>
+</blockquote>
+<h3 id="我的测试：">我的测试：</h3><ul>
+<li><p>更换debug——win32平台为x64平台，未出现该问题（ps:可能跟window系统有关)</p>
+</li>
+<li><p>升级OpenCV版本到2.4.11，问题没再出现<font color="red">【2015-6-1更新】</font></p>
+</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[OpenCV无法正常启动Oxc000007b错误]]>
+    
+    </summary>
+    
+      <category term="OpenCV2" scheme="http://deTrident.github.io/tags/OpenCV2/"/>
+    
+      <category term="OpenCV" scheme="http://deTrident.github.io/categories/OpenCV/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Review TinyXML]]></title>
@@ -43,11 +71,11 @@
   </entry>
   
   <entry>
-    <title><![CDATA[regular-expression]]></title>
+    <title><![CDATA[regular expression 正则表达式]]></title>
     <link href="http://deTrident.github.io/2015/04/12/regular-expression/"/>
     <id>http://deTrident.github.io/2015/04/12/regular-expression/</id>
     <published>2015-04-12T03:00:06.000Z</published>
-    <updated>2015-07-22T03:17:28.116Z</updated>
+    <updated>2015-07-22T12:09:52.424Z</updated>
     <content type="html"><![CDATA[<p>正则表达式超赞教程 (<em>^__^</em>) <a id="more"></a><br>正则表达式30分钟入门教程 <a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="external">http://deerchao.net/tutorials/regex/regex.htm</a><br>（30分钟学不完，请自觉回家种地）</p>
 <p>Python抓包，正则表达式必备，从<a href="http://www.cnblogs.com/huxi" target="_blank" rel="external">AstralWind</a><code>大神博客</code>直接引图，搬运工角色扮演中→_→</p>
 <p><img src="http://ww2.sinaimg.cn/mw690/87f64593gw1eubddbh1duj20m71brb29.jpg" alt="Python-Regex" title="Python正则表达式图"></p>
@@ -65,30 +93,28 @@
   </entry>
   
   <entry>
-    <title><![CDATA[OpenCV无法正常启动Oxc000007b错误]]></title>
-    <link href="http://deTrident.github.io/2015/03/28/OpenCV-Oxc000007b-Error/"/>
-    <id>http://deTrident.github.io/2015/03/28/OpenCV-Oxc000007b-Error/</id>
-    <published>2015-03-28T13:27:26.000Z</published>
-    <updated>2015-06-25T14:15:47.964Z</updated>
-    <content type="html"><![CDATA[<h2 id="环境">环境</h2><p>在之前win7系统下一直没见过这个错误，更换到win8.1 64bit，在一系列非人类配置完成后，编译成功，运行却报错。显示<a id="more"></a><strong>“无法正常启动Oxc000007b错误”</strong>。搜索了一下，好像出现这个问题的不少，折磨了好大一批人。OpenCV我使用的版本是2.4.9，引用的是自己根据<a href="http://www.nmtree.net/2014/03/19/windows_build-opencv-with-cmake-and-vs2013.html" target="_blank" rel="external">柠檬树</a>的教程编译的库。测试程序为VS2013+win32 console application。</p>
-<h2 id="解决方案">解决方案</h2><blockquote>
-<p>网络解决方案(对环境变量的修改，记得注销系统来生效)<br>    1.环境变量里原来只有D:\OpenCV2\build\x64\vc10\bin加上D:\OpenCV2\build\x86\vc10\bin就OK了<br>    2.64位程序环境变量里添加D:\opencv\build\common\tbb\intel64\vc10；32位要添加D:\opencv\build\common\tbb\ia32\vc10</p>
-</blockquote>
-<h3 id="我的测试：">我的测试：</h3><ul>
-<li><p>更换debug——win32平台为x64平台，未出现该问题（ps:可能跟window系统有关)</p>
-</li>
-<li><p>升级OpenCV版本到2.4.11，问题没再出现<font color="red">【2015-6-1更新】</font></p>
-</li>
-</ul>
+    <title><![CDATA[驾校系统web端刷课想法]]></title>
+    <link href="http://deTrident.github.io/2015/03/28/%E9%A9%BE%E6%A0%A1%E7%B3%BB%E7%BB%9Fweb%E7%AB%AF%E5%88%B7%E8%AF%BE%E6%83%B3%E6%B3%95/"/>
+    <id>http://deTrident.github.io/2015/03/28/驾校系统web端刷课想法/</id>
+    <published>2015-03-28T07:46:54.000Z</published>
+    <updated>2015-07-22T12:06:44.242Z</updated>
+    <content type="html"><![CDATA[<h2 id="Background：">Background：</h2><p>学车好累，要考四个科目，修好多学时；冬天学车惨无人道，早五点半起床，伸手不见五指；帝都学车的人好多，提前一周放号抢起来简直丧心病狂，与秒杀春节火车票没啥区别，服务器都挤爆了。<a id="more"></a></p>
+<h2 id="Methods:">Methods:</h2><p>方法就是回去攒积人品和练习反应速度，炉火纯青之时，也就是学成之日→<em>→ →</em>→ →<em>→ →</em>→ →_→。<br>还有方法就是学习抢火车票插件的有余票提示，因为总会有人临时有事退约，时不时的登陆查看太伤神，也不是21世纪青年的作风。</p>
+<h2 id="WorkFlow：">WorkFlow：</h2><p>1.Python-Urllib2模拟浏览器登陆<br>2.下载登陆后约车页面信息<br>3.对信息进行正则化表达式匹配<br>4.定时刷新捕捉，并判断是否在登陆状态<br>5.符合要求通知/符合要求自动提交</p>
+<h2 id="Code:[状态：未完成4,5]">Code:[状态：未完成4,5]</h2><p>1.模拟登陆(环境<code>python2.7.8+Pydev for Eclipse</code>)<br>以远大页面为例，是asp.net页面，打开浏览器登录页面，<code>F12</code>调出开发者工具，找到<code>Network</code>栏，刷新一下页面，筛选出POST方法的页面，并判断帐号提交页。分析cookies，喂给对应项。如下面code，模拟登录页面。不知道为什么，明明预留了验证码校验的和产生页，给拿掉了，这方便了登录和刷新了，要是有验证码的话，自动登录还需要验证码识别，不知道大牛博客里说的借助360火车票识别验证码的那个端口可不可行，这里不管了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">Created on <span class="number">2015</span>年<span class="number">1</span>月<span class="number">15</span>日</span><br><span class="line"><span class="decorator">@author: ZH</span></span><br><span class="line"><span class="string">'''</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">'''</span></span><br><span class="line">Urllib2 excercise 训练</span><br><span class="line"><span class="string">'''</span><br><span class="line">import urllib,urllib2,cookielib</span><br><span class="line"></span><br><span class="line"># NAME=raw_input('input UserName:')</span><br><span class="line"># PASSWORD=raw_input('input Password:')</span><br><span class="line"></span><br><span class="line">##函数体##</span><br><span class="line">def YDJXLogin(url,user,password):</span><br><span class="line">    login_page = 'http://yuanda.bjxueche.net/Login.aspx'   #以远大驾校页面测试</span><br><span class="line">    cj = cookielib.CookieJar()</span><br><span class="line">    opener=urllib2.build_opener(urllib2.HTTPCookieProcessor(cj)) </span><br><span class="line">    #reqlg = urllib2.Request(url=login_page)</span><br><span class="line">    opener.addheaders= [('Accept','text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')]</span><br><span class="line">    opener.addheaders= [('Referer', 'http://yuanda.bjxueche.net/Login.aspx')]</span><br><span class="line">    #模拟firefox浏览器登录</span><br><span class="line">    opener.addheaders = [('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; rv:18.0) Gecko/20100101 Firefox/18.0')] </span><br><span class="line">    para = urllib.urlencode(&#123;"__VIEWSTATE":"/wEPDwUKMTg0NDI4MDE5OGRkFUZOE3C7QQL4pJ/OooIN7IVnK5Qfznhym5mN84V5JNQ=",</span><br><span class="line">                         "__EVENTVALIDATION":"/wEWBgKyrJC6AwKl1bKzCQK1qbSRCwLoyMm8DwLi44eGDAKAv7D9CmhsXW9MljUvafu1DHCUaQFrdAWsE0NBXcwobLtWNjsS",</span><br><span class="line">                         "txtUserName":user,</span><br><span class="line">                         "txtPassword":password,</span><br><span class="line">                         "txtIMGCode":"",</span><br><span class="line">                         "BtnLogin":"登  录",</span><br><span class="line">                         "rcode":""</span><br><span class="line">                         &#125;)</span><br><span class="line">    opener.open(login_page, para)</span><br><span class="line">    op = opener.open(url)</span><br><span class="line">    data = op.read()</span><br><span class="line">    return data</span><br><span class="line"></span><br><span class="line">print YDJXLogin("http://yuanda.bjxueche.net/index.aspx",370xxxxxxxxxxxxxxx,xxxxxx) #以远大驾校页面测试</span></span><br></pre></td></tr></table></figure>
+<p>2.之后难题待攻克，有时间再研究。纯属爱好，不恶意刷新。如有那啥，及时删除。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[OpenCV无法正常启动Oxc000007b错误]]>
+    <![CDATA[urllib刷课想法]]>
     
     </summary>
     
-      <category term="OpenCV2" scheme="http://deTrident.github.io/tags/OpenCV2/"/>
+      <category term="Python" scheme="http://deTrident.github.io/tags/Python/"/>
     
-      <category term="OpenCV" scheme="http://deTrident.github.io/categories/OpenCV/"/>
+      <category term="urllib" scheme="http://deTrident.github.io/tags/urllib/"/>
+    
+      <category term="Python" scheme="http://deTrident.github.io/categories/Python/"/>
     
   </entry>
   
