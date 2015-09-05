@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://deTrident.github.io/2015/08/05/worldwind-JO-cannot-find-the-funtion-setPreferredSize/</loc>
+    <lastmod>2015-09-05T13:34:42.101Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://deTrident.github.io/2015/06/06/Schulte-Grid/</loc>
     <lastmod>2015-09-05T13:25:38.332Z</lastmod>
   </url>
@@ -19,11 +24,6 @@
   <url>
     <loc>http://deTrident.github.io/2015/04/05/Cpp-common-error/</loc>
     <lastmod>2015-09-05T12:38:18.269Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://deTrident.github.io/2015/08/05/worldwind-JO-cannot-find-the-funtion-setPreferredSize/</loc>
-    <lastmod>2015-09-05T12:29:58.432Z</lastmod>
   </url>
   
   <url>

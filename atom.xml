@@ -5,7 +5,7 @@
   <subtitle><![CDATA[Technology Changes the World]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://deTrident.github.io//"/>
-  <updated>2015-09-05T12:29:58.432Z</updated>
+  <updated>2015-09-05T13:34:42.101Z</updated>
   <id>http://deTrident.github.io//</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[WorldWind开发中WorldWindowGLCanvas.setPreferredSize()函数找不到]]></title>
+    <title><![CDATA[WorldWind开发中WorldWindowGLCanvas .setPreferredSize()函数找不到]]></title>
     <link href="http://deTrident.github.io/2015/08/05/worldwind-JO-cannot-find-the-funtion-setPreferredSize/"/>
     <id>http://deTrident.github.io/2015/08/05/worldwind-JO-cannot-find-the-funtion-setPreferredSize/</id>
     <published>2015-08-05T11:24:50.000Z</published>
-    <updated>2015-09-05T12:29:58.432Z</updated>
+    <updated>2015-09-05T13:34:42.101Z</updated>
     <content type="html"><![CDATA[<p>值高温假期，无意翻到了csdn中三维GIS开发的专栏，讲的是worldwind Java三维GIS系统开发的东西，十分感兴趣。恰巧要求的环境已经存在，直接耍起来。将最新的Worldwind和JOGL下载回来，解压加载，然后测试Java和JOGL，一切都很顺利。然而，<a id="more"></a>将第一个demo敲入package的时候，却发现WorldWindowGLCanvas中没有setPreferredSize()函数的实现。第一想法，demo太老了，可能是worldwind最新版把这个函数遗弃了，换了新的函数。但是，搜了一下最新的worldwind样例，发现仍有该函数的使用。Google一下，关于该<a href="http://forum.worldwindcentral.com/showthread.php?44844-wwd-setpreferredsize-is-not-recognized" target="_blank" rel="external">函数无法找到的问题</a>不只我一个，<a href="http://forum.worldwindcentral.com/showthread.php?21172-ApplicationTemplate-example" target="_blank" rel="external">worldwind社区</a>和<a href="http://stackoverflow.com/questions/11939028/setpreferredsize-does-not-work" target="_blank" rel="external">stackoverflow论坛</a>中也有不少提问，没有统一的解决办法，在论坛回复中可以看出大多数人是没遇到的。之后开始怀疑Linux之前是不是被我卸载东西搞坏了，又放到了windows系统环境下试了试，同样出现问题。晚饭过后，扒拉开worldwind api说明，发现是继承的javax.media.opengl.awt.GLCanvas里的问题。</p>
 <h2 id="出错原因：">出错原因：</h2><p>JOGL的引用，我是按照官方jogamp.org下载的jogamp-all-platforms.7z来的。worldwind包里gluegen-rt.jar和jogl-all.jar与官方的jar不同。因此，问题就出这里了，将worldwind包里的这两个JOGL的文件拷贝，并引用到Eclipse工程的external_lib中即可，不用官方的最新版。<br><strong>注意：</strong><br>Linux 32位，需要以下四个：gluegen-rt.jar,gluegen-rt-natives-linux-i586.jar,jogl-all.jar,jogl-all-natives-linux-i586.jar<br>Linux 64位，需要以下四个：gluegen-rt.jar,gluegen-rt-natives-linux-amd64.jar,jogl-all.jar,jogl-all-natives-linux-amd64.jar<br>windows 32位，需要以下四个：gluegen-rt.jar,gluegen-rt-natives-windows-i586.jar,jogl-all.jar,jogl-all-natives-windows-i586.jar<br>windows 64位环境下，需要以下四个：gluegen-rt.jar,gluegen-rt-natives-windows-amd64.jar,jogl-all.jar,jogl-all-natives-windows-amd64.jar</p>
 <h2 id="Demo运行结果：">Demo运行结果：</h2><p><img src="http://ww2.sinaimg.cn/mw690/87f64593gw1evru90g1dzj20tm0m4akm.jpg" alt=""></p>
