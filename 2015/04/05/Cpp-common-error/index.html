@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>C++易爆bug点 | Better man</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="C++易爆bug点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++易爆bug点">
+<meta property="og:url" content="http://deTrident.github.io/2015/04/05/Cpp-common-error/index.html">
+<meta property="og:site_name" content="Better man">
+<meta property="og:description" content="C++易爆bug点">
+<meta property="og:updated_time" content="2015-09-05T12:38:18.269Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++易爆bug点">
+<meta name="twitter:description" content="C++易爆bug点">
+  
+    <link rel="alternative" href="/atom.xml" title="Better man" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/avatar.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">deTrident</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Technology Changes the World</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/deTrident" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="mailto:zhengradi@gmail.com" title="mail">mail</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/IDL/" style="font-size: 20px;">IDL</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/OpenCV2/" style="font-size: 10px;">OpenCV2</a> <a href="/tags/OpenGIS/" style="font-size: 10px;">OpenGIS</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/RPC/" style="font-size: 20px;">RPC</a> <a href="/tags/TinyXML/" style="font-size: 10px;">TinyXML</a> <a href="/tags/WorldWind/" style="font-size: 10px;">WorldWind</a> <a href="/tags/batch/" style="font-size: 20px;">batch</a> <a href="/tags/urllib/" style="font-size: 10px;">urllib</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">中国科学院大学13级硕士生，信号与信息处理专业。熟悉C++、C#、IDL、Matlab语言，参与开发诸多科研项目。前端与平面设计爱好者。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">deTrident</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">deTrident</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Technology Changes the World</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/deTrident" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="mailto:zhengradi@gmail.com" title="mail">mail</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Cpp-common-error" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/04/05/Cpp-common-error/" class="article-date">
+  	<time datetime="2015-04-05T02:12:14.000Z" itemprop="datePublished">2015-04-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C++易爆bug点
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/C/">C++</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.将复杂的公式转化为可递推的简单表达式，通过循环的方法求解或者趋近<br>2.continue跳转到循环开头，跳过循环块中后面代码<br>3.break控制无限循环，break退出当前循环，return退出当前函数模块<br><a id="more"></a><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="keyword">true</span>)</span><br><span class="line">&#123;</span><br><span class="line">    DoSomethingRepeatedly;</span><br><span class="line">    <span class="keyword">if</span>(expression)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">&#123;</span><br><span class="line">    DoSomething;</span><br><span class="line">    <span class="keyword">if</span>()</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">&#125;<span class="keyword">while</span>(<span class="keyword">true</span>)</span><br><span class="line"><span class="keyword">for</span>(;;)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span>()<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>4.while循环，0表示false，其他都为true，-1也是true</p>
+<p>5.函数重载，处理不同情况的参数的函数</p>
+<p>6.变量声明后，养成初始化的习惯，贴别是指针，要初始化为NULL。指针如果未初始化，否则它包含的是随机值，可能导致程序访问非法单元，使程序崩溃。</p>
+<p>7.动态分配内存<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Type* Pointer = <span class="keyword">new</span> Type;</span><br><span class="line"><span class="keyword">delete</span> Pointer;</span><br><span class="line"></span><br><span class="line">Type* Pointer= <span class="keyword">new</span> Type[NumElemets];</span><br><span class="line"><span class="keyword">delete</span>[] Pointer;</span><br></pre></td></tr></table></figure></p>
+<p>对于使用new[…]分配的内存块，需要使用delete[]来释放；对于new为单个元素分配的内存，需要delete来释放。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">   <span class="preprocessor">#<span class="keyword">include</span>&lt;iostream&gt;</span></span><br><span class="line">   <span class="preprocessor">#<span class="keyword">include</span>&lt;string&gt;</span></span><br><span class="line">   <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line">   </span>&#123;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"Enter your name:"</span>;</span><br><span class="line"><span class="built_in">string</span> Name;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;Name;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Add 1 to reserve space for a terminating null</span></span><br><span class="line"><span class="keyword">int</span> CharsToAllocate = Name.length()+<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span>* CopyOfName = <span class="keyword">new</span> <span class="keyword">char</span>[CharsToAllocate];</span><br><span class="line"></span><br><span class="line">strcopy(CopyOfName,Name.c_str());</span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"Dynamically allocated buffer contains: "</span>&lt;&lt;CopyOfName&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span>[] CopyOfName;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>8.指针的递增递减运算（++ —）<br>Type<em> pType = Address;<br>++pType后，将指向Address + sizeof(Type)<br>cout&lt;&lt;</em>(++pType)</p>
+<p>9.const用于指针<br>指针指向数据为常量，不能修改，但可以修改指针包含的地址，即指针可以指向其他地方</p>
+<p>int HoursInDay = 24;<br>const int<em> pInteger = &HoursInDay;//NO! cannot use pInteger to change HoursInDay<br>int MonthsInYear = 12;<br>pInteger = &amp; MonthsInYear;//OK!
+</em>pInteger = 13;//NO! Compile fails:Cannot change data<br>int <em> pAnotherPointerToInt = pInteger;//NO! Compile fails:Cannot assign const to non-const<br>指针包含的地址是常量，不能修改，但可修改指针指向数据<br>int DaysInMonth = 30;<br>int</em> const pDaysInMonth = &DaysInMonth;<br><em>pDaysInMonth = 31; //OK! Value can be changed<br>int DaysInLunarMonth = 28;<br>pDaysInMonth = &DaysInLunarMonth;//NO! complie fails: cannot change address!<br>指针包含的地址以及它指向的值都是常量，不能修改（最严格）指向const数据的const的指针<br>int HoursInDay = 24;<br>const int</em> const pHoursInDay = &HoursInDay;<br>*pHoursInDay = 25;//compile fails:cannot change pointed value<br>int DaysInMonth = 30;<br>pHoursInDay = &DaysInMonth;//NO!</p>
+<p>10.数组和指针有相似之处，解除引用运算符(*)可用于数组，同样数组运算符[]可用于指针</p>
+<p>11.使用指针常犯的编程错误<br>内存泄露（c++运行时间越长，占用内存越多，系统的越慢，如果在new后不再需要，没有配套的delete释放，会出现这种问题。C++没有C#和java的自动垃圾收集器）<br>int<em> pNumbers = new int[5];//initial allocation<br>//use pointer pNumbers<br>…<br>//forget to release using delete[] pNumbers;<br>…<br>//make another allocation and overwrite the pointer<br>pNumbers = new int[0];//leaks the previously allocated memory 泄露<br>指针指向无效内存单元（常见导师应用程序崩溃的原因就是无效指针）当指针有效时再释放delete，初始化指针<br>悬浮指针/迷途指针，务必在初始化时和释放指针后将其设置为NULL，并在使用运算符</em>对指针解除引用前检查它是否有效<br>12.new发出的分配请求是否得到满足（请求分配的内存量特大或系统处于临界状态，一般不要假定内存分配能够成功，C++提供了两种确保指针有效的方法，默认方法是使用异常，引发std::bad_alloc异常）<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;iostream&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	</span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">	</span><br><span class="line"><span class="comment">//Request lots of memory space</span></span><br><span class="line">	</span><br><span class="line"><span class="keyword">int</span>* pAge = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">536870911</span>];</span><br><span class="line">	</span><br><span class="line"><span class="comment">//use the allocated memory</span></span><br><span class="line">	</span><br><span class="line"><span class="keyword">delete</span>[] pAge;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line"><span class="keyword">catch</span>(bad_alloc)</span><br><span class="line">	</span><br><span class="line">&#123;</span><br><span class="line">		</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"Memory allocation failed.Ending program"</span>&lt;&lt;endl;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>有一个new变种——new(nothrow)，它不引发异常，而返回NULL，让您能够在使用指针前检查其有效性<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;iostream&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="comment">//Request lots of memory space,use nothrow version</span></span><br><span class="line">	<span class="keyword">int</span>* pAge = <span class="keyword">new</span>(nothrow) <span class="keyword">int</span>[<span class="number">0x1fffffff</span>];</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span>(pAge)  <span class="comment">//check pAge!=NULL</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//use the allocated memory</span></span><br><span class="line">		<span class="keyword">delete</span>[] pAge;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"Memory allocation failed.Ending program"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>13.当参数占用大量内存，在传参的过程中，赋值给函数参数，开销大，引用很用用处（int&amp; Parameter=argument）<br>函数声明：ReturnType DoSomething(Type&amp; Parameter);<br>调用：ReturnType Result =DoSomething(argument);</p>
+<p>void Calulate(const int&amp; Number,int&amp; Result)//两个引用，第一个接收输入，第二个输出结果<br>{<br>    Result = Number<em>Number; //const限制Number不用修改，所以不可以Number</em>=Number;<br>    //最好将Const用于引用参数，除非函数需要将结果存储在参数中<br>}</p>
+<p>14.避免如下使用<br>    int<em> pNumber = new int;<br>    int</em> pCopy = pNumber;为释放内存，是否需要对它们都调用delete？<br>    这样是错误的，对new返回的地址，只能调用delete一次，另外，最好避免让两个指针指向相同的地址，因为对其一调用delete将导致另一个无效，另外编写程序时，应避免使用有效性不确定的指针。<br>    使用引用，比使用指针好，因为引用不像指针会失效。</p>
+<p>15.类声明类似于函数声明，将类本身及其属性告诉编译器。类本身不能改变程序的行为，必须使用它，就像调用函数一样。</p>
+<p>16.带默认值的构造函数<br>class Human<br>{<br>    private:<br>        string Name;<br>        int Age;<br>    public:<br>        Human(string InputName,int InputAge = 25);<br>        Human(string InputName,int InputAge):Name(InputName),Age(InputAge);<br>    …<br>}<br>int main()<br>{<br>    Human FirstMan;   //如果第二个构造注释掉，就会报错，因为当提供了构造函数后，系统不再提供默认构造，但可以Human FirstMan(“EVe”)<br>    Human FirstWoman(“EVe”,18);<br>}</p>
+<p>17.析构函数是重置变量以及释放动态分配的内存和其他资源的理想场所。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> MyString</span><br><span class="line">&#123;</span><br><span class="line">	</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">		</span><br><span class="line">MyString(<span class="keyword">const</span> <span class="keyword">char</span>* InitalInput)</span><br><span class="line">		</span><br><span class="line">&#123;</span><br><span class="line">			</span><br><span class="line"><span class="keyword">if</span>(InitalInput != NULL)</span><br><span class="line">			</span><br><span class="line">&#123;</span><br><span class="line">				</span><br><span class="line">...</span><br><span class="line">			</span><br><span class="line">&#125;</span><br><span class="line">			</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">				</span><br><span class="line">Buffer = NULL;</span><br><span class="line">		</span><br><span class="line">&#125;</span><br><span class="line">		</span><br><span class="line">~MyString()</span><br><span class="line">		</span><br><span class="line">&#123;</span><br><span class="line">			</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"Invoking destructor,clearing up"</span>&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">			</span><br><span class="line"><span class="keyword">if</span>(Buffer!=NULL)</span><br><span class="line">				</span><br><span class="line"><span class="keyword">delete</span> [] Buffer;</span><br><span class="line">		</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>18.<em> 复制构造函数，确保深复制，编写类的程序必须提供<br>语法：<br>    class MyString<br>{<br>    MyString(const MyString&amp; CopySource)；<br>}<br>MyString::MyString(const MyString&amp; CopySource)<br>{<br>    //implementation code<br>}函数的名称必须和类名称一致，它的唯一的一个参数是本类型的一个引用变量，该参数是const类型，不可变的。例如：类X的拷贝构造函数的形式为X(X&amp; x)。<br>以引用方式传入的当前类的对象作为参数。这个参数是源对象的别名，您使用的它来编写自定义的复制代码，确保对所有缓冲区进行深复制。<br>没有显式地声明一个拷贝构造函数，那么，编译器将会自动生成一个默认的拷贝构造函数，该构造函数完成对象之间的位拷贝。位拷贝又称浅拷贝。自定义拷贝构造函数是一种良好的编程风格，它可以阻止编译器形成默认的拷贝构造函数，提高源码效率。深拷贝和浅拷贝的定义可以简单理解成：如果一个类拥有资源(堆，或者是其它系统资源)，当这个类的对象发生复制过程的时候，这个过程就可以叫做深拷贝，反之对象存在资源，但复制过程并未复制资源的情况视为浅拷贝。<br>类包含原始指针成员(char </em>等)，务必编写复制构造函数和复制赋值运算符。<br>编写复制构造函数时，务必将接受源对象的参数声明为const引用<br>务必将类成员声明为std::string和智能指针类(而不是原始指针)，因为它们实现了复制构造函数，可减少工作量<br>要禁止类对象被复制，可声明一个私有的复制构造函数，确保调用不能通过编译。为禁止赋值，可声明一个私有的赋值运算符。但无法禁止通过实例化多个对象来创建多名总统。<br>class President<br>{<br>    private:<br>        President(const President&amp;);<br>        President&amp; operater= (const President&amp;);<br>…<br>}<br>如何只能有一个实例的单例类？<br>使用单例的概念，它使用私有构造函数、私有赋值运算符和静态实例成员。关键字static用于类的数据成员时，该数据成员将在所有的实例之间共享。将static用于函数中声明的局部变量时，该变量的值将在两次调用之间保持不变。将static用于成员函数(方法)时，该方法将在所有成员之间共享。</p>
+<p>总是应该编写一个复制构造函数吗？<br>如果类的数据成员是设计良好的智能指针、字符串类或STL容器(如std::vector)，则编译器生成的默认复制构造函数将调用成员的复制构造函数。然而，如果类包含原始指针成员（如使用int* 而不是std::vector<int>）表示的动态数组，则需要提供设计良好的复制构造函数，确保类将类对象按照值传递给函数时进行深复制，创建该数组的拷贝。</int></p>
+<p>19.禁止在栈中实例化的类<br>    栈空间十分有限，如果要编写一个数据库类，其内部结构包含数据很大，应该禁止在栈上实例化它，而只允许在堆中创建其实例。关键在于将析构函数声明为私有。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;iostream&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">class</span> MonsterDB</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">		~MonsterDB()&#123;&#125;;</span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		<span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">DestoryInstance</span><span class="params">(MonsterDB* pInstance)</span></span><br><span class="line">		</span>&#123;</span><br><span class="line">			<span class="comment">//static member can access private destructor</span></span><br><span class="line">			<span class="keyword">delete</span> pInstance;</span><br><span class="line">		&#125;<span class="comment">//如果没有将导致内存泄露</span></span><br><span class="line">		...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	MonsterDB* pMyDatabase=<span class="keyword">new</span> MonsterDB();</span><br><span class="line">	<span class="comment">//pMyDatabse-&gt;member methods(...)</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//delete pMyDatabase；//private destructor cannnot be invoked</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//use static member to deallocate</span></span><br><span class="line">	MonsterDB::DestroyInstance(pMyDatabase);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>20.友元函数与友元类<br>C++中以关键字friend声明友元关系。友元可以访问与其有friend关系的类中的私有成员。友元包括友元函数和友元类。</p>
+<p>21.在静态方法中使用实例变量，应显式地声明一个形参，让调用者将实参设置为this指针。</p>
+<p>22.struct来自C语言，默认公有成员，公有继承基结构。与类相似，可放函数等。<br>struct Human<br>{<br>    // constructor,public by default<br>    Human(const MyString&amp; InputName,int InputAge,bool InputGender):Name(InputName),Age(InputAge),Gender(InputGender){}</p>
+<pre><code><span class="function"><span class="keyword">int</span> <span class="title">GetAge</span><span class="params">()</span>
+</span>{
+    <span class="keyword">return</span> Age;
+}
+</code></pre><p>private:<br>    int Age;<br>    bool Gender;<br>    MyString Name;<br>};</p>
+<p>结构实例化跟类也很像<br>Human FirstMan(“Adam”,25,true); // is an instance of struct Human</p>
+<p>23.friend关键字，友元函数，友元类</p>
+<p>24.访问成员，可使用句点运算符(.)，也可使用指针运算符(-&gt;)。哪种方式更好？<br>如果有一个指针对象的指针，则使用指针运算符合适；如果栈中实例化了一个对象，并将其存储到了一个局部变量中，则使用句点运算符最合适。</p>
+<p>25.基类初始化——向基类传递参数<br>class Base<br>{<br>public:<br>    Base(int SomeNumber)<br>    {<br>        //Do something with SomeNumber<br>    }<br>};<br>class Derived:public Base<br>{<br>public:<br>    Derived():Base(25) //instantiate class Base with argument 25<br>    {<br>        //derived class constructor code<br>    }<br>};<br>如何调用基类中被覆盖的方法、在派生类中调用基类的方法？<br>需要使用作用域解析运算符(::)，myDinner.Fish::Swim();<br>防止在派生类中隐藏基类的方法？1.使用作用域解析运算符（myDinner.Fish::Swim()）2.在派生类中，使用using解除对方法的隐藏3.覆盖所有基类的重载版本</p>
+<p>关于继承要注意的！！！<br><em>不要仅为重用微不足道的方法而创建继承层次结构。
+</em>在派生类中，不要编写与基类方法同名但参数不同的方法，以免隐藏基类方法</p>
+<p>26.将子对象复制给Base对象，如显示复制和通过传递参数。会产生切除问题。编译器只将复制Base部分，不是整个对象的复制，而是Base能够容纳的部分。要避免这种无意间的裁剪，不要按值传递参数，应该以指向基类的指针或const引用的方式传递。</p>
+<p>27.将析构函数声明为虚函数，可避免delete用于base指针时，不会调用派生类的析构函数的情况发生。</p>
+<p>28.不能被实例化的基类被称为抽象基类，从它派生出其他类，要创建抽象基类，可声明纯虚函数<br>声明方式：<br>class AbstractBase<br>{<br>public:<br>    virtual void Dosomething()=0; //pure virtual method<br>};<br>告诉编译器，派生类必须实现方法DoSomething();<br>class Derived:public AbstractBase<br>{<br>public:<br>    void DoSomething()<br>    {<br>        cout&lt;&lt;”Implemented virtual function”&lt;&lt;endl;<br>    }<br>};<br>这种基类非常适合用于定义派生类必须实现的接口。</p>
+<p>29.使用虚拟继承，解决菱形问题<br>在继承层次结构中，继承多个从同一个类派生而来的基类时，如果这些基类没有采用虚拟继承，将导致二义性，这种二义性被称为菱形问题<br>class Derived1:public virtual Base<br>{<br>}</p>
+<p>30.虚函数应用<br>    对于将被派生类覆盖的基类方法，务必将其声明为虚函数<br>    纯虚函数导致类变成抽象基类，且在派生类中必须提供纯虚函数的实现<br>    务必考虑使用虚继承<br>    别忘了给基类提供一个虚析构函数<br>    别忘了，编译器不允许您创建抽象基类的实例<br>    别忘了，在菱形继承层次结构中，虚继承旨在确保只有一个基类实例。<br>    用于创建继承层次结构和声明基类函数时，关键字virtual的作用不同</p>
+<p>31.与函数一样，运算符可以重载(operator override)<br>运算符声明和函数极其类似：return_type operator_symbol (…parameter list…)<br>重载运算符的目的就是直观，更方便<br>单目运算符（只对一个操作数进行操作），实现全局函数或静态成员函数：++ — <em> ! &amp; ~ + - -&gt;（成员选择） 转换运算符<br>    Date&amp; operator ++ ()<br>    {<br>        ++Day;<br>        return </em>this;<br>    }</p>
+<pre><code>Date <span class="keyword">operator</span> ++(<span class="keyword">int</span>)
+{
+    <span class="function">Date <span class="title">Copy</span><span class="params">(Day,Month,Year)</span></span>; <span class="comment">//复制当前对象，在执行递增或递减运算</span>
+    ++Day;
+    <span class="keyword">return</span> Copy;
+}
+</code></pre><p>32.不能重载的运算符<br>运算符<br>名称<br>运算符<br>名称<br>.<br>成员选择<br>?:<br>条件三目运算符<br>.*<br>指针成员选择<br>sizeof<br>获取对象/类类型的大小<br>::<br>作用域解析</p>
+<p>重载：<br>务必实现让类易于运用的运算符，但不要实现无助于实现这个目的的运算符。<br>对于包含原始指针成员的类，除给它提供赋值构造函数和析构函数外，务必给它提供复制赋值运算符。<br>如果没有提供复制构造函数和复制赋值运算符，编译器将提供其默认版本，而这些版本不一定会对包含的原始指针进行深复制。<br>如果使用遵循C++11的编译器，则对于管理动态分配资源（如数组）的类，务必给它提供移动赋值运算符和移动构造函数。<br>即便没有提供移动赋值运算符和移动构造函数，编译器也不会替您创建它们，而是转而使用复制运算符和复制构造函数。</p>
+<p>智能指针类的编写，需要实现运算符*和-&gt;的override，还要实现析构函数，并对复制赋值和复制构造的情形深思熟虑。</p>
+<p>33.C++类型转换运算符</p>
+<p>除dynamic_cast类型转换外，都是可以避免的，仅当需要满足遗留应用程序的需求时，才需要使用其他类型转换运算符。<br>向下转换（base-&gt;derived），除非使用dynamic_cast，否则都不安全！使用dynamic_cast时，记得对转换得到的指针进行检查，看其是否有效！</p>
+<p>创建继承层次结构时，应尽量将函数声明为虚函数。在通过基类指针调用这些函数时，如果该指针指向的是派生类对象，将调用相应类的函数版本。<br>static_cast<br>用于在相关类型的指针之间进行转换，还可以显式地执行标准数据类型的类型转换（原本可自动隐式转换）<br>使用static_cast可将指针向上转换为基类型，也可向下转换为派生类型。<br>Derived objDerived;<br>Base<em> pBase=&objDerived; //upcast ok!<br>Derived</em> pDerived=pBase; //Error<br>Derived<em> pDerived=static_cast&lt;Derived</em>&gt;(pBase); // pass!<br>只验证指针类型是否相关，而不会执行任何运行阶段检查，可通过编译，但在运行阶段可能导致意外结果。<br>除了用于向上和向下转换外，static_cast还可在很多情况下将隐式类型转换为显式类型，来引起代码阅读注意作用。<br>int Num = static_cast<int>(dPi);<br>dynamic_cast<br>与静态类型转换相反，动态类型转换在运行阶段（即应用程序运行时）执行类型转换。<br>Derived objDerived;<br>Derived<em> pDerived=dynamic_cast&lt;Derived</em>&gt;(pBase);<br>if (pDerived)<br>    pDerived-&gt;CallDerivedClassFunction();<br>reinterpret_cast（避免使用）<br>语法强制重新解释类型，将一种类型转换为另一种，不管它们是否相关。<br>Base<em> pBase = new Base();<br>CUnrelated </em> pUnrelated = reinterpret_cast<cunrelated*>(pBase); //可通过编译，但是不是良好的编程<br>接收static_cast不允许的类型转换。通常用于低级程序（如驱动程序），在这种程序中，需要将数据转换为API能够接受的简单类型（例如有些API只能使用字节流unsigned char*）<br>const_cast<br>起到关闭对象的访问修饰符const的作用<br>可能该引用const，但是用的第三方库中没有用const，且第三方库无法修改，在这种情况下，const_cast应用。<br>void DisplayAllData(const SomeClass&amp; mData)<br>{<br>    mData.DisplayMembers(); //Compile failure:call to a non-const member using a const reference<br>    SomeClass&amp; refData = const_cast<someclass&>(mData);<br>    refData.DisplayMembers(); //Allowed!<br>}<br>除非万不得已，不用其调用非const函数，可能导致不可预料的行为。</someclass&></cunrelated*></int></p>
+<p>34.避免宏多次包含<br>复杂设计，头文件间彼此包含会导致递归问题，为了避免这种问题，可结合使用宏以及预处理器编译指令#ifndef和#endif<br>包含<head2.h>的head1.h类似于下面这样：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor">#ifndef HEADER1_H_  <span class="comment">//让预处理器仅在标识符未定义时才继续</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> HEADER1_H_</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;header2.h&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="preprocessor">#<span class="keyword">endif</span> <span class="comment">//end of header1.h</span></span></span><br><span class="line">header2.h与此类似，但宏定义不同，且包含的是&lt;header1.h&gt;:</span><br><span class="line"><span class="preprocessor">#ifndef HEADER2_H_</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> HEADER2_H_</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;header1.h&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="preprocessor">#<span class="keyword">endif</span> <span class="comment">//end of header2.h</span></span></span><br><span class="line"></span><br><span class="line">编写宏函数   宏函数不考虑数据类型，因此使用宏函数很危险，因为不支持任何形式的类型安全</span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> SQUARE(x) ((x)*(x))</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> MIN(a,b) (((a)&lt;(b))?(a):(b))</span></span><br><span class="line">但也是其优点，可以通用数据类型，不用编写两套常规函数。</span><br></pre></td></tr></table></figure></head2.h></p>
+<p>35.assert宏验证表达式<br>立即单步执行测试不现实<br>需要包含<assert.h>，用来对表达式或变量的值进行验证。</assert.h></p>
+<h1 id="include">include<assert.h></assert.h></h1><p>int main()<br>{<br>    char* sayHello = new char[25];<br>    assert(sayHello != NULL);  //throws up a message if pointer is NULL<br>    ….<br>    delete[] sayHello;<br>    return 0;<br>}</p>
+<p>注意：在发布模式release下被禁用，仅在debug下显示错误消息。在有些开发环境中，assert()被实现为函数，而不是宏。<br>由于assert在release模式下禁用，对于应用程序正确运行至关重要的检查（如dynamic_cast的返回值），为确保在发布模式下运行，应使用if语句。</p>
+<p>36.模板函数和模板类<br>模板函数可以不指定类型（如int MaxValue = GetMax <int> (Int1,Int2)红色可省略），模板类必须显示的指定类型</int></p>
+<h1 id="include-1">include<iostream></iostream></h1><h1 id="include-2">include<string></string></h1><p>using namespace std;</p>
+<p>template <typename type=""><br>void DisplayComparison(const Type&amp; value1,const Type&amp; value2)<br>{<br>    if(value1&gt;value2)<br>        return value1;<br>    else<br>        return value2;<br>}</typename></p>
+<p>template <typename type=""><br>void DisplayComparison(const Type&amp; value1,const Type&amp; value2)<br>{<br>    cout&lt;&lt;GetMax(value1,value2)&lt;&lt;endl;<br>}</typename></p>
+<p>int main()<br>{<br>    int Int1=-101,Int2=2011;<br>    DisplayComparison(Int1,Int2);<br>    double d1=3.14,d2=3.1416;<br>    DisplayComparison(d1,d2);<br>    string Name1(“Jack”),Name2(“John”);<br>    DisplayComparison(Name1,Name2);<br>}</p>
+<p>37.模板类和静态成员<br>初始化模板类静态成员<br>通用的初始化语法为：<br>template<template parameters=""> StaticType ClassName<template arguments="">::StaticVarName;<br>例如：template<typename t=""> int TestStatic<t>::StaticValue;</t></typename></template></template></p>
+<p>38.在头文件中，多次包含防范使用#ifndef、#define和#endif，可避免头文件出现多次包含或递归包含错误，有事可以提高编译速度。</p>
+<p>39.模板最重要的最强大的应用是在标准模板库(STL)中。STL由一系列模板类和函数组成，它们分别包含泛型实用类和算法。能够实现动态数组、链表以及包含键-值对的容器，而sort等算法可用于这些容器，从而对容器包含的数据进行处理。</p>
+<p>40.STL提供了<br>用于存储信息的容器，用于访问容器存储的信息的迭代器，用于操作容器内容的算法<br>提供了两种类型容器：顺序容器、关联容器、容器适配器（Container Adapter）的类</p>
+<p>顺序容器：（如数组和列表）<br>std::vector 动态数组，在最后插入<br>std::deque 与vector类似，但允许在开头插入或删除元素<br>std::list 与双向链表一样，对象被连接在一起，可在任何位置添加和删除对象<br>std::forward_list 类似list，是单项链表，只能沿一个方向遍历</p>
+<h1 id="vector和数组类似，允许随机访问元素，即可使用下标运算符[]指定元素在vector中的位置（索引），从而直接访问或操作元素。另外，STL_vector是动态数组，因此能够根据应用程序在运行阶段的需求自动调整长度。">vector和数组类似，允许随机访问元素，即可使用下标运算符[]指定元素在vector中的位置（索引），从而直接访问或操作元素。另外，STL vector是动态数组，因此能够根据应用程序在运行阶段的需求自动调整长度。</h1><p>==========================</p>
+<p>关联容器：（如词典，按指定的顺序存储数据）<br>std::set<br>std::unordered_set<br>std::map<br>std::unordered_map<br>std::multiset<br>std::unordered_multiset<br>std::multimap<br>std::unordered_multimap</p>
+<p>hash<em>*和unordered</em>*容器有更好的元素搜索性能。</p>
+<p>STL迭代器—-模板类<br>输入迭代器：解除引用，对象可能位于集合中。最严格的输入迭代器只能以只读的方式访问对象。<br>输出迭代器：执行写入操作。最严格的只能执行写入操作。<br>    上述两种基本迭代器进一步分为三类：<br>前向迭代器：是输入和输出迭代器的细化，允许输入与输出。可以是const的，只能读取它指向的对象；也可以改变对象，即可读写对象。通常用于单向链表。forward_list<br>双向迭代器：是前向迭代器的细化，可对其执行递减操作，从而向后操作。通常用于双向链表。<br>随机访问迭代器：对双向迭代器的细化，可将其加减一个偏移量，还可将两个迭代器相减以得到集合中两个元素的相对距离。随机访问迭代器通常用于数组。（细化指具体化或继承）<br>STL算法<br>    查找、排序和反转都是标准的编程需求，以算法方式提供这些函数。<br>常用STL算法：<br>    std::find 在集合中查找值<br>    std::find_if 根据用户指定的谓词在集合中查找值<br>    std::reverse 反转集合中元素的排列顺序<br>    std::remove_if 根据用户定义的谓词将元素从集合中删除<br>    std::transform 使用用户定义的变换函数对容器中的元素进行变换<br>都是std命名空间中的模板函数，必须包含头文件<algorithm></algorithm></p>
+<p>迭代器如何将容器和STL算法连接？<br>code实例：</p>
+<h1 id="include-3">include<iostream></iostream></h1><h1 id="include-4">include<vector></vector></h1><h1 id="include-5">include<algorithm></algorithm></h1><p>using namespace std;</p>
+<p>int main()<br>{<br>    //A dynamic array of intergers<br>    vector <int> vecIntegerArray;<br>    //insert sample integers into the array<br>    vecIntegerArray.push_back(50);<br>    vecIntegerArray.push_back(200);<br>    vecIntegerArray.push_back(23);</int></p>
+<pre><code>cout&lt;&lt;<span class="string">"The contents of the vector are:"</span>&lt;&lt;endl;
+
+//walk the vector <span class="keyword">and</span> read values <span class="keyword">using</span> an <span class="keyword">iterator</span>
+vector &lt;<span class="type">int</span>&gt;::<span class="keyword">iterator</span> iArrayWalker = vecIntegerArray.begin();
+
+<span class="keyword">while</span>(iArrayWalker != vecIntegerArray.<span class="keyword">end</span>())
+{
+    //write the value to the screen
+    cout&lt;&lt;*iArrayWalker&lt;&lt;endl;
+
+    //<span class="type">Increment</span> the <span class="keyword">iterator</span> to access the next element
+    ++iArrayWalker;
+}
+
+//find an element (say <span class="number">23</span>) <span class="keyword">in</span> the <span class="type">array</span> <span class="keyword">using</span> the 'find' algorithm
+vector &lt;<span class="type">int</span>&gt;::<span class="keyword">iterator</span> iElement = find(vecIntegerArray.begin(),vecIntegerArray.<span class="keyword">end</span>(),<span class="number">23</span>);
+
+//check <span class="keyword">if</span> value was found
+<span class="keyword">if</span> (iElement != vecIntegerArray.<span class="keyword">end</span>())
+{
+    //value was found...<span class="type">Determine</span> position <span class="keyword">in</span> the <span class="type">array</span>:
+    <span class="type">int</span> position = distance (vecIntegerArray.begin(),iElement);
+    cout&lt;&lt;<span class="string">"value"</span>&lt;&lt;*iElement;
+    cout&lt;&lt;<span class="string">"found in the vector at position:"</span>&lt;&lt;position&lt;&lt;endl;
+}
+
+<span class="keyword">return</span> <span class="number">0</span>;
+</code></pre><p>}</p>
+<p>41.模板template 声明和实现要在一起，不能分开</p>
+<p>42.逗号表达式，运算符最低      <strong><em> , </em></strong>  先前面表达式，再后面表达式。<br>    例如x=(i=10 , i*5)</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/04/12/regular-expression/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          regular expression 正则表达式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/03/28/驾校系统web端刷课想法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">驾校系统web端刷课想法</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Cpp-common-error" data-title="C++易爆bug点" data-url="http://deTrident.github.io/2015/04/05/Cpp-common-error/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"trident"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 deTrident
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-64223440-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

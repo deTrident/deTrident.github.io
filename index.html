@@ -107,7 +107,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/OpenCV2/" style="font-size: 10px;">OpenCV2</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/TinyXML/" style="font-size: 10px;">TinyXML</a> <a href="/tags/urllib/" style="font-size: 10px;">urllib</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+						<a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/IDL/" style="font-size: 20px;">IDL</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/OpenCV2/" style="font-size: 10px;">OpenCV2</a> <a href="/tags/OpenGIS/" style="font-size: 10px;">OpenGIS</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/RPC/" style="font-size: 20px;">RPC</a> <a href="/tags/TinyXML/" style="font-size: 10px;">TinyXML</a> <a href="/tags/WorldWind/" style="font-size: 10px;">WorldWind</a> <a href="/tags/batch/" style="font-size: 20px;">batch</a> <a href="/tags/urllib/" style="font-size: 10px;">urllib</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
@@ -170,6 +170,267 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-worldwind-JO-cannot-find-the-funtion-setPreferredSize" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/05/worldwind-JO-cannot-find-the-funtion-setPreferredSize/" class="article-date">
+  	<time datetime="2015-08-05T11:24:50.000Z" itemprop="datePublished">2015-08-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/05/worldwind-JO-cannot-find-the-funtion-setPreferredSize/">WorldWind开发中WorldWindowGLCanvas.setPreferredSize()函数找不到</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>值高温假期，无意翻到了csdn中三维GIS开发的专栏，讲的是worldwind Java三维GIS系统开发的东西，十分感兴趣。恰巧要求的环境已经存在，直接耍起来。将最新的Worldwind和JOGL下载回来，解压加载，然后测试Java和JOGL，一切都很顺利。然而，
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenGIS/">OpenGIS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WorldWind/">WorldWind</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/GIS/">GIS</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/08/05/worldwind-JO-cannot-find-the-funtion-setPreferredSize/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Schulte-Grid" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/06/06/Schulte-Grid/" class="article-date">
+  	<time datetime="2015-06-06T04:16:34.000Z" itemprop="datePublished">2015-06-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/06/Schulte-Grid/">舒尔特方格(SchulteGrid)游戏C#实现</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="背景">背景</h2><p>观察网上的一个flash小游戏，对照着，做了一个C#版本的。<br><a href="https://github.com/deTrident/MyAPP/raw/master/SchulteGrid.exe">舒尔特方格游戏下载地址</a></p>
+<h2 id="游戏说明">游戏说明</h2><p>舒尔特方格(Schulte Grid)是在一张方形卡片上画上 1cm × 1cm 的 25 个方格，格子内任意填写上阿拉伯数字1-25 等共25个数字。训练时，要求被测者用手指按 1-25的顺序依次指出其位置，同时诵读出声，记录所用时间。点完25个数字所用时间越短，注意力水平越高。（来自百度百科）</p>
+<h2 id="效果">效果</h2><p><img src="http://ww3.sinaimg.cn/mw690/87f64593gw1evrw2x991yj20bk0dlabx.jpg" alt=""></p>
+<h2 id="Show_me_Code">Show me Code</h2>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/C/">C#</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/06/06/Schulte-Grid/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-RPCortho-batch-2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/05/23/RPCortho-batch-2/" class="article-date">
+  	<time datetime="2015-05-23T04:36:57.000Z" itemprop="datePublished">2015-05-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/23/RPCortho-batch-2/">借助批处理和ENVI/IDL实现批量高分数据从解压缩到RPC校正（二）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前段时间，帮一项目负责人批量处理数据，虽然利用ENVI软件操作十分简单，选好RPC文件，点点按钮，等待处理完一景后，再重复点点按钮。然而，当数据量巨大，单景卫星数据影像RPC校正时间又长，让人去盯着，是不可能的事。</p>
+<h2 id="所需环境">所需环境</h2><ol>
+<li>上一篇7-zip批处理解压后数据</li>
+<li>ENVI5.1/IDL8.3及以上</li>
+</ol>
+<h2 id="程序下载">程序下载</h2><p>所需ENVI版本安装好，双击即可使用<br><a href="https://raw.githubusercontent.com/deTrident/MyAPP/master/rpcortho_batch.sav">rpcortho_batch.sav</a><br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IDL/">IDL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RPC/">RPC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/batch/">batch</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/IDL/">IDL</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/05/23/RPCortho-batch-2/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-RPCortho-batch-1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/05/22/RPCortho-batch-1/" class="article-date">
+  	<time datetime="2015-05-22T12:11:50.000Z" itemprop="datePublished">2015-05-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/22/RPCortho-batch-1/">借助批处理和ENVI/IDL实现批量高分数据从解压缩到RPC校正（一）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前段时间，帮一项目负责人批量处理数据，虽然利用ENVI软件操作十分简单，选好RPC文件，点点按钮，等待处理完一景后，再重复点点按钮。然而，当数据量巨大，单景卫星数据影像RPC校正时间又长，让人去盯着，是不可能的事。</p>
+<h2 id="所需环境">所需环境</h2><ol>
+<li>tar数据</li>
+<li>安装7-zip</li>
+</ol>
+<h2 id="代码如下">代码如下</h2>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IDL/">IDL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RPC/">RPC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/batch/">batch</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Batch/">Batch</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/05/22/RPCortho-batch-1/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-OpenCV-Oxc000007b-Error" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -357,11 +618,11 @@
 
 
   
-    <article id="post-驾校系统web端刷课想法" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Cpp-common-error" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/03/28/驾校系统web端刷课想法/" class="article-date">
-  	<time datetime="2015-03-28T07:46:54.000Z" itemprop="datePublished">2015-03-28</time>
+      <a href="/2015/04/05/Cpp-common-error/" class="article-date">
+  	<time datetime="2015-04-05T02:12:14.000Z" itemprop="datePublished">2015-04-05</time>
 </a>
     </div>
   
@@ -374,7 +635,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/28/驾校系统web端刷课想法/">驾校系统web端刷课想法</a>
+      <a class="article-title" href="/2015/04/05/Cpp-common-error/">C++易爆bug点</a>
     </h1>
   
 
@@ -383,7 +644,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Background：">Background：</h2><p>学车好累，要考四个科目，修好多学时；冬天学车惨无人道，早五点半起床，伸手不见五指；帝都学车的人好多，提前一周放号抢起来简直丧心病狂，与秒杀春节火车票没啥区别，服务器都挤爆了。
+        <p>1.将复杂的公式转化为可递推的简单表达式，通过循环的方法求解或者趋近<br>2.continue跳转到循环开头，跳过循环块中后面代码<br>3.break控制无限循环，break退出当前循环，return退出当前函数模块<br>
       
     </div>
     
@@ -391,18 +652,18 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/urllib/">urllib</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
 	</div>
 
       
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Python/">Python</a>
+	<a class="article-category-link" href="/categories/C/">C++</a>
 	</div>
 
 
       
         <p class="article-more-link">
-          <a  href="/2015/03/28/驾校系统web端刷课想法/#more">more >></a>
+          <a  href="/2015/04/05/Cpp-common-error/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -419,69 +680,10 @@
 
 
   
-    <article id="post-Hexo-GitHub-Pages搭建" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2015/03/24/Hexo-GitHub-Pages搭建/" class="article-date">
-  	<time datetime="2015-03-24T12:39:33.000Z" itemprop="datePublished">2015-03-24</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/24/Hexo-GitHub-Pages搭建/">Hexo+GitHub Pages搭建</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://ww3.sinaimg.cn/mw690/87f64593gw1etggj06mmmg20dw07su0y.gif" alt=""></p>
-<h3 id="Hi_Github"><b>Hi Github</b></h3><p>一直习惯于百度空间来记录和分享一些专业内容和技术性问题，突然遭遇到了百度空间关闭，真是好受伤，只好用两天的时
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/GitHub/">GitHub</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/03/24/Hexo-GitHub-Pages搭建/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">

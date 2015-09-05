@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>舒尔特方格(SchulteGrid)游戏C#实现 | Better man</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="舒尔特方格">
+<meta property="og:type" content="article">
+<meta property="og:title" content="舒尔特方格(SchulteGrid)游戏C#实现">
+<meta property="og:url" content="http://deTrident.github.io/2015/06/06/Schulte-Grid/index.html">
+<meta property="og:site_name" content="Better man">
+<meta property="og:description" content="舒尔特方格">
+<meta property="og:image" content="http://ww3.sinaimg.cn/mw690/87f64593gw1evrw2x991yj20bk0dlabx.jpg">
+<meta property="og:updated_time" content="2015-09-05T13:25:38.332Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="舒尔特方格(SchulteGrid)游戏C#实现">
+<meta name="twitter:description" content="舒尔特方格">
+  
+    <link rel="alternative" href="/atom.xml" title="Better man" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/avatar.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">deTrident</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Technology Changes the World</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/deTrident" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="mailto:zhengradi@gmail.com" title="mail">mail</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/IDL/" style="font-size: 20px;">IDL</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/OpenCV2/" style="font-size: 10px;">OpenCV2</a> <a href="/tags/OpenGIS/" style="font-size: 10px;">OpenGIS</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/RPC/" style="font-size: 20px;">RPC</a> <a href="/tags/TinyXML/" style="font-size: 10px;">TinyXML</a> <a href="/tags/WorldWind/" style="font-size: 10px;">WorldWind</a> <a href="/tags/batch/" style="font-size: 20px;">batch</a> <a href="/tags/urllib/" style="font-size: 10px;">urllib</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">中国科学院大学13级硕士生，信号与信息处理专业。熟悉C++、C#、IDL、Matlab语言，参与开发诸多科研项目。前端与平面设计爱好者。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">deTrident</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">deTrident</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Technology Changes the World</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/deTrident" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="mailto:zhengradi@gmail.com" title="mail">mail</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Schulte-Grid" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/06/06/Schulte-Grid/" class="article-date">
+  	<time datetime="2015-06-06T04:16:34.000Z" itemprop="datePublished">2015-06-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      舒尔特方格(SchulteGrid)游戏C#实现
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/C/">C#</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="背景">背景</h2><p>观察网上的一个flash小游戏，对照着，做了一个C#版本的。<br><a href="https://github.com/deTrident/MyAPP/raw/master/SchulteGrid.exe" target="_blank" rel="external">舒尔特方格游戏下载地址</a></p>
+<h2 id="游戏说明">游戏说明</h2><p>舒尔特方格(Schulte Grid)是在一张方形卡片上画上 1cm × 1cm 的 25 个方格，格子内任意填写上阿拉伯数字1-25 等共25个数字。训练时，要求被测者用手指按 1-25的顺序依次指出其位置，同时诵读出声，记录所用时间。点完25个数字所用时间越短，注意力水平越高。（来自百度百科）</p>
+<h2 id="效果">效果</h2><p><img src="http://ww3.sinaimg.cn/mw690/87f64593gw1evrw2x991yj20bk0dlabx.jpg" alt=""></p>
+<h2 id="Show_me_Code">Show me Code</h2><a id="more"></a>
+<blockquote>
+<p>MainForm.cs<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.ComponentModel;</span><br><span class="line"><span class="keyword">using</span> System.Data;</span><br><span class="line"><span class="keyword">using</span> System.Diagnostics;</span><br><span class="line"><span class="keyword">using</span> System.Drawing;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"><span class="keyword">using</span> System.Windows.Forms;</span><br><span class="line"><span class="keyword">namespace</span> <span class="title">SchulteForm</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">MainForm</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        <span class="preprocessor">#<span class="keyword">region</span> 全局成员字段</span></span><br><span class="line">        HelpBox hb; <span class="comment">//帮助对话框</span></span><br><span class="line">        SchulteForm.Controls.Numbers nbs; <span class="comment">//实例化按钮矩阵类</span></span><br><span class="line">        Stopwatch stopWatch = <span class="keyword">new</span> Stopwatch(); <span class="comment">//计时器实例化</span></span><br><span class="line">        Thread thd ;</span><br><span class="line">        List&lt;Button&gt; listbu= <span class="keyword">new</span> List&lt;Button&gt;();</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">        <span class="preprocessor">#<span class="keyword">endregion</span></span></span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MainForm</span>(<span class="params"></span>)</span><br><span class="line">        </span>&#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">MainForm_Load</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span><br><span class="line">        </span>&#123;</span><br><span class="line">            nbs = <span class="keyword">new</span> Controls.Numbers();</span><br><span class="line">            nbs.InitNumbers(<span class="keyword">this</span>.tableLayoutPanel, listbu);</span><br><span class="line">            nbs.RandomNumbers(<span class="keyword">ref</span> listbu);</span><br><span class="line">            <span class="keyword">foreach</span> (Control col <span class="keyword">in</span> listbu)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//Console.WriteLine(col.Text);</span></span><br><span class="line">                <span class="keyword">if</span> (col.Text == <span class="string">"1"</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    col.Click += <span class="keyword">new</span> EventHandler(col_Click);</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (col.Text == <span class="string">"25"</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    col.Click += <span class="keyword">new</span> EventHandler(col_OverClick);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (col.Text != <span class="string">"25"</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    col.Click += <span class="keyword">new</span> EventHandler(col_NumClick);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">col_OverClick</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span><br><span class="line">        </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (stopWatch.IsRunning == <span class="keyword">true</span> &amp; i==<span class="number">25</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                stopWatch.Stop();</span><br><span class="line">                StartButton.Text = <span class="string">"开始游戏"</span>;</span><br><span class="line">                thd.Abort();</span><br><span class="line">                <span class="comment">//Label.CheckForIllegalCrossThreadCalls = true;</span></span><br><span class="line">                DialogResult dr = MessageBox.Show(<span class="string">"Your Time:"</span> + timeLabel.Text, <span class="string">"Done"</span>, MessageBoxButtons.OK, MessageBoxIcon.Information);</span><br><span class="line">                Button btn = sender <span class="keyword">as</span> Button;</span><br><span class="line">                btn.Click -= <span class="keyword">new</span> System.EventHandler(col_OverClick); <span class="comment">//事件队列，有顺序！</span></span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (dr == DialogResult.OK)</span><br><span class="line">                &#123;</span><br><span class="line">                    stopWatch.Reset();</span><br><span class="line">                    <span class="comment">//btn.Click -= new System.EventHandler(col_NumClick);</span></span><br><span class="line">                    ReStartButton_Click(sender,e);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">col_NumClick</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span><br><span class="line">        </span>&#123;</span><br><span class="line">            nbs.ResetNumbersColor(<span class="keyword">ref</span> listbu);</span><br><span class="line">            Button btn = sender <span class="keyword">as</span> Button;</span><br><span class="line">            <span class="comment">//MessageBox.Show(btn.Text);</span></span><br><span class="line">            <span class="comment">//btn.BackColor = SystemColors.Control;</span></span><br><span class="line">            nbs.ClickNumbers(<span class="keyword">ref</span> btn, <span class="keyword">ref</span> i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">col_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span><br><span class="line">        </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (stopWatch.IsRunning == <span class="keyword">false</span> &amp; StartButton.Text == <span class="string">"开始游戏"</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                thd = <span class="keyword">new</span> Thread(RunWatch);</span><br><span class="line">                thd.IsBackground = <span class="keyword">true</span>;</span><br><span class="line">                Label.CheckForIllegalCrossThreadCalls = <span class="keyword">false</span>;</span><br><span class="line">                stopWatch.Start();</span><br><span class="line">                StartButton.Text = <span class="string">"暂停游戏"</span>;</span><br><span class="line">                thd.Start();</span><br><span class="line">            &#125;</span><br><span class="line">            Button btn = sender <span class="keyword">as</span> Button;</span><br><span class="line">            btn.Click -= <span class="keyword">new</span> System.EventHandler(col_Click); <span class="comment">//取消事件，因为点击完1后，就要点击2了，就不需要这个事件了；并且，防止“重新开始”，变成不是1的数字，误触</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">MainForm_HelpRequested</span>(<span class="params"><span class="keyword">object</span> sender, HelpEventArgs hlpevent</span>)</span><br><span class="line">        </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (hb == <span class="keyword">null</span> || hb.IsDisposed)</span><br><span class="line">            &#123;</span><br><span class="line">                hb = <span class="keyword">new</span> HelpBox();</span><br><span class="line">            &#125;</span><br><span class="line">            hb.Show();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">MainForm_HelpButtonClicked</span>(<span class="params"><span class="keyword">object</span> sender, CancelEventArgs e</span>)</span><br><span class="line">        </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (hb == <span class="keyword">null</span> || hb.IsDisposed)</span><br><span class="line">            &#123;</span><br><span class="line">                hb = <span class="keyword">new</span> HelpBox();</span><br><span class="line">            &#125;</span><br><span class="line">            hb.Show();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">StartButton_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span><br><span class="line">        </span>&#123;</span><br><span class="line">            <span class="comment">//1.点击开始游戏，开始计时，变成暂停游戏</span></span><br><span class="line">            <span class="comment">//2.点击数字1开始游戏</span></span><br><span class="line">            <span class="comment">//3.点击暂停游戏，暂停时间，再次点击开始计时</span></span><br><span class="line">            <span class="keyword">if</span> (StartButton.Text == <span class="string">"开始游戏"</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                thd = <span class="keyword">new</span> Thread(RunWatch);</span><br><span class="line">                thd.IsBackground = <span class="keyword">true</span>;</span><br><span class="line">                Label.CheckForIllegalCrossThreadCalls = <span class="keyword">false</span>;</span><br><span class="line">                stopWatch.Start();</span><br><span class="line">                StartButton.Text = <span class="string">"暂停游戏"</span>;</span><br><span class="line">                thd.Start();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                stopWatch.Stop();</span><br><span class="line">                StartButton.Text = <span class="string">"开始游戏"</span>;</span><br><span class="line">                thd.Abort();</span><br><span class="line">                <span class="comment">//Label.CheckForIllegalCrossThreadCalls = true;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ReStartButton_Click</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span><br><span class="line">        </span>&#123;</span><br><span class="line">            <span class="comment">//1.计时器清零</span></span><br><span class="line">            <span class="comment">//2.随机数重新产生</span></span><br><span class="line">            <span class="comment">//3. i =1</span></span><br><span class="line">            <span class="comment">//4. 重新设置颜色</span></span><br><span class="line">            <span class="comment">//5. 重置前25按钮的事件要取消</span></span><br><span class="line">            stopWatch.Stop();</span><br><span class="line">            stopWatch.Reset();</span><br><span class="line">            StartButton.Text = <span class="string">"开始游戏"</span>;</span><br><span class="line">            i = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">foreach</span> (Control col <span class="keyword">in</span> listbu)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (col.Text == <span class="string">"1"</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    col.Click -= <span class="keyword">new</span> System.EventHandler(col_Click);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (col.Text == <span class="string">"25"</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    col.Click -= <span class="keyword">new</span> System.EventHandler(col_OverClick);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (col.Text != <span class="string">"25"</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    col.Click -= <span class="keyword">new</span> EventHandler(col_NumClick);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            nbs.RandomNumbers(<span class="keyword">ref</span> listbu);</span><br><span class="line">            <span class="keyword">foreach</span> (Control col <span class="keyword">in</span> listbu)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//Console.WriteLine(col.Text);</span></span><br><span class="line">                <span class="keyword">if</span> (col.Text == <span class="string">"1"</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    col.Click += <span class="keyword">new</span> EventHandler(col_Click);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (col.Text == <span class="string">"25"</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    col.Click += <span class="keyword">new</span> EventHandler(col_OverClick);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (col.Text != <span class="string">"25"</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    col.Click += <span class="keyword">new</span> EventHandler(col_NumClick);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            nbs.ResetNumbersColor(<span class="keyword">ref</span> listbu);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">RunWatch</span>(<span class="params"></span>)</span><br><span class="line">        </span>&#123;</span><br><span class="line">            <span class="comment">//stopWatch.Stop();</span></span><br><span class="line">            <span class="comment"><span class="xmlDocTag">///</span>/ Get the elapsed time as a TimeSpan value.</span></span><br><span class="line">            TimeSpan ts;</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">while</span> (<span class="keyword">true</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    Thread.Sleep(<span class="number">10</span>);</span><br><span class="line">                    ts = stopWatch.Elapsed;</span><br><span class="line">                    <span class="comment">// Format and display the TimeSpan value.</span></span><br><span class="line">                    <span class="comment">//string elapsedTime =</span></span><br><span class="line">                    timeLabel.Text = String.Format(<span class="string">"&#123;0:00&#125;:&#123;1:00&#125;:&#123;2:00&#125;.&#123;3:00&#125;"</span>,</span><br><span class="line">                        ts.Hours, ts.Minutes, ts.Seconds,</span><br><span class="line">                        ts.Milliseconds / <span class="number">10</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception)</span><br><span class="line">            &#123;</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">throw</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//timeLabel.Text = stopWatch.ElapsedTicks.ToString();</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">MainForm_FormClosing</span>(<span class="params"><span class="keyword">object</span> sender, FormClosingEventArgs e</span>)</span><br><span class="line">        </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (thd!=<span class="keyword">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                thd.Abort();</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//Label.CheckForIllegalCrossThreadCalls = true;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Numbers.cs<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Drawing;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"><span class="keyword">using</span> System.Windows.Forms;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">SchulteForm.Controls</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Numbers</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//Button b;</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">InitNumbers</span>(<span class="params">TableLayoutPanel tbp, List&lt;Button&gt; listbu</span>)</span><br><span class="line">        </span>&#123;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++)</span><br><span class="line">                &#123;</span><br><span class="line">                    Button bu = <span class="keyword">new</span> Button();</span><br><span class="line">                    bu.Dock = DockStyle.Fill;</span><br><span class="line">                    bu.Text = (i*<span class="number">5</span>+j+<span class="number">1</span>).ToString();</span><br><span class="line">                    bu.Font = <span class="keyword">new</span> Font(<span class="string">"Consolas"</span>, <span class="number">30</span>, FontStyle.Bold |FontStyle.Italic);</span><br><span class="line">                    listbu.Add(bu);</span><br><span class="line">                    tbp.Controls.Add(bu, j, i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">RandomNumbers</span>(<span class="params"><span class="keyword">ref</span> List&lt;Button&gt; listbu</span>)</span><br><span class="line">        </span>&#123;</span><br><span class="line">            <span class="keyword">int</span>[] a = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">15</span>, <span class="number">16</span>, <span class="number">17</span>, <span class="number">18</span>, <span class="number">19</span>, <span class="number">20</span>, <span class="number">21</span>, <span class="number">22</span>, <span class="number">23</span>, <span class="number">24</span>, <span class="number">25</span> &#125;;</span><br><span class="line">            Random r = <span class="keyword">new</span> Random();</span><br><span class="line">            <span class="keyword">int</span> b = a.Length;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.Length; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> temp = r.Next(b);</span><br><span class="line">                <span class="comment">//Console.WriteLine(a[temp]);</span></span><br><span class="line">                <span class="comment">//int temp1 = a[temp];</span></span><br><span class="line">                <span class="comment">//a[temp] = a[b - 1];</span></span><br><span class="line">                <span class="comment">//a[b - 1] = temp1;</span></span><br><span class="line">                <span class="keyword">string</span> temp1 = listbu[temp].Text;</span><br><span class="line">                listbu[temp].Text = listbu[b - <span class="number">1</span>].Text;</span><br><span class="line">                listbu[b - <span class="number">1</span>].Text = temp1;</span><br><span class="line">                b -= <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ClickNumbers</span>(<span class="params"><span class="keyword">ref</span> Button bu,<span class="keyword">ref</span> <span class="keyword">int</span> i</span>)</span><br><span class="line">        </span>&#123;</span><br><span class="line">           </span><br><span class="line">            <span class="comment">//Console.WriteLine(col.Text);</span></span><br><span class="line">            <span class="comment">//Button btn = col as Button;</span></span><br><span class="line">            <span class="keyword">if</span> (bu.Text == i.ToString())</span><br><span class="line">            &#123;</span><br><span class="line">                bu.BackColor = Color.Orange;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                bu.BackColor = Color.Red;</span><br><span class="line">            &#125;</span><br><span class="line">              </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ResetNumbersColor</span>(<span class="params"><span class="keyword">ref</span> List&lt;Button&gt; listbu</span>)</span><br><span class="line">        </span>&#123;</span><br><span class="line">            <span class="keyword">foreach</span> (Control col <span class="keyword">in</span> listbu)</span><br><span class="line">            &#123;</span><br><span class="line">                col.BackColor = SystemColors.Control;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/08/05/worldwind-JO-cannot-find-the-funtion-setPreferredSize/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          WorldWind开发中WorldWindowGLCanvas.setPreferredSize()函数找不到
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/05/23/RPCortho-batch-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">借助批处理和ENVI/IDL实现批量高分数据从解压缩到RPC校正（二）</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Schulte-Grid" data-title="舒尔特方格(SchulteGrid)游戏C#实现" data-url="http://deTrident.github.io/2015/06/06/Schulte-Grid/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"trident"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 deTrident
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-64223440-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
